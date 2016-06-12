@@ -4,8 +4,9 @@
 
 @font-face {
   font-family: "DJKScript";
-  src: url("../fonts/djkscript-webfont.woff") (format: "woff"), 
-  src: url("../fonts/djkscript-webfont.woff2") (format: "woff2");
+  src: url("../fonts/djkscript-webfont.woff") format("woff"), 
+  url("../fonts/djkscript-webfont.woff2") format("woff2"),
+  url("../fonts/DJKScript.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -143,6 +144,11 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+}
+
+.content {
+  font-family: "DJKScript";
+  font-size: 4rem;
 }
 
 .well {
