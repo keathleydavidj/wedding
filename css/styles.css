@@ -41,11 +41,11 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  /*background-image: url("../img/bg-parchemin.jpg");*/
 }
 
 body {
-  color: #fff;
+  color: #000;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
@@ -132,6 +132,22 @@ body {
   }
 }
 
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../img/rocks-bg.jpg) no-repeat;
+    background-size: cover; 
+}
 
 /*
  * Cover
@@ -207,5 +223,14 @@ body {
   .mastfoot,
   .cover-container {
     width: 700px;
+  }
+}
+
+@media (max-device-width: 800px) {
+  html {
+    background: url(../img/rocks-bg.jpg) #000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
   }
 }
