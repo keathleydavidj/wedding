@@ -4,226 +4,81 @@
 
 @font-face {
   font-family: "DJKScript";
-  src: url("../fonts/djkscript-webfont.woff") format("woff"), 
-  url("../fonts/djkscript-webfont.woff2") format("woff2"),
-  url("../fonts/DJKScript.ttf") format("truetype");
+  src: url("../fonts/djkscript-webfont.woff") format("woff"), url("../fonts/djkscript-webfont.woff2") format("woff2"), url("../fonts/DJKScript.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-
-/* Links */
-
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-
-/* Custom default button */
-
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none;
-  /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
 html,
 body {
+  width: 100%;
   height: 100%;
-  /*background-image: url("../img/bg-parchemin.jpg");*/
 }
 
 body {
-  color: #000;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+  font-family: 'Trade Winds', cursive;
 }
 
+/* Nav */
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
-  /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-}
-
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
-/* Padding for spacing */
-
-.inner {
-  padding: 30px;
-}
-
-
-/*
- * Header
- */
-
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.masthead-nav > li {
+.navbar-nav.nav-justified {
   display: inline-block;
+  float: none;
+  vertical-align: top;
+  text-align: center;
 }
 
-.masthead-nav > li + li {
-  margin-left: 20px;
+.navbar a {
+  color: #f00;
+  font-size: 2.5em;
 }
 
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  /* IE8 proofing */
-  color: rgba(255, 255, 255, .75);
-  border-bottom: 2px solid transparent;
+/*   */
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: #f00;
 }
 
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
-video#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(../img/rocks-bg.jpg) no-repeat;
-    background-size: cover; 
-}
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-}
-
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-.content {
-  font-family: "DJKScript";
-  font-size: 4rem;
-}
-
-.well {
-  background-color: #333;
+.text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 6em;
+  font-weight: 700;
 }
 
 #countdown p {
-  display: inline-block;
-  padding: 5px;
-  /*  background: #FFA500;
-*/
-  margin: 0 0 20px;
+  font-size: 2em;
+  display: inline;
 }
 
 
-/*
- * Footer
- */
+/* Header */
 
-.mastfoot {
-  color: #999;
-  /* IE8 proofing */
-  color: rgba(255, 255, 255, .5);
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%;
-    /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../img/rocks-bg.jpg) no-repeat;
+  background-size: cover;
 }
 
 @media (max-device-width: 800px) {

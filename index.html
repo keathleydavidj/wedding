@@ -9,6 +9,7 @@
   <title>Sam and David</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
   <link href="css/styles.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,56 +20,35 @@
 </head>
 
 <body>
-
-  <video autoplay loop poster="rocks-bg.jpg" id="bgvid">
-    <source src="img/rocks.webm" type="video/webm">
-    <source src="rocks.mp4" type="video/mp4">
-  </video>
-
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand">Sam and David</h3>
-            <div id="countdown">
-              <p class="days">00</p>
-              <p class="timeRefDays">days</p>
-              <p> remaining</p>
-              <!--          <p class="hours">00</p>
-              <p class="timeRefHours">hours</p>
-              <p class="minutes">00</p>
-              <p class="timeRefMinutes">minutes</p>
-              <p class="seconds">00</p>
-              <p class="timeRefSeconds">seconds</p> -->
-            </div>
-          </div>
-        </div>
-        <div class="inner content">
-          <span>
-            <h2>Sam </h2>
-            <object data="img/skull_and_x.svg" type="image/svg+xml">
-              <img src="img/skull_and_x.png" />
-            </object>
-            <h2> David</h2>
-          </span>
-<!--           <p>Hey guys, we're getting married!</p>
-          <p>7th October 2016</p>
-          <p>7:30 - 11:00 PM
-            <br/> 2328 Broadway Avenue J
-            <br/> Galveston, Texas 77550</p>
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-default">Learn more</a>
-          </p>
- -->        </div>
-        <div class="mastfoot">
-          <div class="inner">
-            <p>Website designed and built by <a href="http://davidjk.com">David Keathley</a>.</p>
-          </div>
-        </div>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+      <ul class="nav nav-tabs nav-justified">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">'nother link</a></li>
+        <li><a href="#">number 3</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="header">
+    <video autoplay loop poster="rocks-bg.jpg" id="bgvid">
+      <source src="img/rocks.webm" type="video/webm">
+      <source src="rocks.mp4" type="video/mp4">
+    </video>
+    <div class="text-vertical-center">
+      <h1>Sam + David</h1>
+      <div id="countdown">
+        <p class="days">00</p>
+        <p class="timeRefDays">days</p>
+        <p> remaining</p>
+        <!--  <p class="hours">00</p>
+        <p class="timeRefHours">hours</p>
+        <p class="minutes">00</p>
+        <p class="timeRefMinutes">minutes</p>
+        <p class="seconds">00</p>
+        <p class="timeRefSeconds">seconds</p> -->
       </div>
     </div>
-  </div>
+  </header>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
