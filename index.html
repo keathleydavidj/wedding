@@ -23,13 +23,13 @@
   <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <ul class="nav nav-tabs nav-justified">
-        <li><a href="#">Link</a></li>
-        <li><a href="#">'nother link</a></li>
-        <li><a href="#">number 3</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#event">The Wedding</a></li>
+        <li><a href="#registry">Registry</a></li>
       </ul>
     </div>
   </nav>
-  <header class="header">
+  <header class="header full-screen bg-image">
     <video autoplay loop poster="rocks-bg.jpg" id="bgvid">
       <source src="img/rocks.webm" type="video/webm">
       <source src="rocks.mp4" type="video/mp4">
@@ -49,11 +49,44 @@
       </div>
     </div>
   </header>
+  <section id="story">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Our Story</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec libero eget arcu pharetra faucibus a sit amet enim. Donec diam dolor, tempus vitae dignissim ac, pretium id libero. In non fermentum lorem, at ultrices nisi. Phasellus imperdiet ipsum ut ligula sagittis pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in est mi. Donec posuere erat ac eros tristique pretium. Morbi finibus quis enim in aliquet. Donec suscipit, ex vitae vestibulum facilisis, tortor nisi scelerisque mi, sit amet vestibulum est ligula nec libero. In velit nunc, varius nec convallis quis, malesuada id neque. Vivamus hendrerit enim augue, in vehicula justo dapibus at. Fusce feugiat nisl est, non iaculis eros convallis eu.</p>
+          <p>Maecenas euismod orci at ligula ultricies, nec pellentesque mauris rhoncus. Phasellus rhoncus odio sapien, volutpat aliquam urna consequat et. Duis nec ante cursus, dapibus leo placerat, sagittis massa. Vestibulum ac scelerisque dolor, et imperdiet tellus. Suspendisse efficitur laoreet malesuada. Etiam rhoncus nec leo ut vestibulum. Nullam sed tortor et quam fringilla venenatis eget at metus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="event">
+  </section>
+  <section id="registry">
+  </section>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script>
+  // Scrolls to the selected menu item on the page
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
 </body>
 
 </html>
